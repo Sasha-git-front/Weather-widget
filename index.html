@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☀️ Weather ⛈️</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <main>
+        <div class="weather-container">
+            <div class="box">
+                <div class="weather-container__header">
+                    <h1 id="date"></h1>
+                    <h2 id="location">
+                        <input type="text" placeholder="Назва населенного пункта">
+                    </h2>
+                </div>
+                <button class="weather-container__btn">Оновити</button>
+                <div class="weather-container__loading-indicator">Завантаження...</div>
+                <div class="weather-container__info">
+                    <div class="row">
+                        <div class='column'>
+                            <p class="city">Dnipro</p>
+                            <p class="status">Clouds</p>
+                        </div>
+                        <div class="column">
+                            <img id="weather-icon" src="http://openweathermap.org/img/w/02d.png" alt="Clouds">
+                        </div>
+                    </div>
+                    <div class="temperature">
+                        <p id="temperature">-3 °C</p>
+                        <p id="feels-like">Feels like: -6 °C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/code/script.js"></script>
+</body>
+
+</html>
