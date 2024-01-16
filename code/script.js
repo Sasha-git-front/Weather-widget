@@ -22,7 +22,7 @@ input.addEventListener('change', () => {
 })
 
 async function request(value) {
-    debugger
+
     try {
         loadingIndicator.style.display = 'block';
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${value}&appid=5868385811e81ae08671f43616141be1`, {
