@@ -7,6 +7,7 @@ const weatherIcon = document.getElementById('weather-icon');
 const temperature = document.getElementById('temperature');
 const feelsLike = document.getElementById('feels-like');
 const loadingIndicator = document.querySelector('.weather-container__loading-indicator');
+const weatherInfo = document.querySelector('.weather-container__info');
 
 function getCurrentDate() {
     const now = new Date();
@@ -16,9 +17,9 @@ function getCurrentDate() {
     return formattedDayOfWeek.replace(/р\./, '');
 }
 
-input.addEventListener('change', () => {
+input.addEventListener('input', () => {
     request(input.value);
-    input.value = '';
+    
 })
 
 async function request(value) {
@@ -37,9 +38,10 @@ async function request(value) {
         console.error('Помилка при отриманні даних:', error);
     }
 }
-
 function getWeather(data) {
     console.log(data);
+    input.value = '';
+    weatherInfo.style.display = 'block';
     city.innerHTML = data.name;
     weatherStatus.innerHTML = data.weather[0].main;
     weatherIcon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;

@@ -28,13 +28,14 @@ main {
 .weather-container .box {
   margin: 0 auto;
   width: 70%;
-  padding: 15px 0;
+  padding: 15px 0 30px 0;
 }
 .weather-container .weather-container__header {
   margin-bottom: 20px;
 }
 .weather-container .weather-container__info {
   margin: 0 auto;
+  display: none;
 }
 .weather-container .row {
   display: flex;
